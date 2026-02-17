@@ -1,0 +1,56 @@
+.campo-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.campo-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  user-select: none;
+}
+
+.campo-input {
+  width: 100%;
+  font-family: var(--font-mono);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 0.75rem 1rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  outline: none;
+  -moz-appearance: textfield;
+  text-align: center;
+  line-height: 1;
+}
+
+/* Quitar flechas del input number */
+.campo-input::-webkit-outer-spin-button,
+.campo-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.campo-input::placeholder {
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+.campo-input:hover {
+  border-color: rgba(255, 255, 255, 0.15);
+  background: var(--bg-elevated);
+}
+
+.campo-input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-dim), 0 0 20px var(--accent-glow);
+  background: #1e2230;
+}
